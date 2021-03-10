@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "AlarmDuzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section id="basic-horizontal-layouts">
+        <div class="row match-height">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Alarm <strong>Arıza</strong></h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form form-horizontal">
+                                <div class="form-body">
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <label>Sensör Yeri</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <a href="#">Standort01</a>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Durum</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <span class="badge bg-success">Aktif</span>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Tanım</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" class="form-control" id="basicInput" placeholder="Lütfen bu alarmı tanımlayın">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Tetikleyici</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <label style="text-transform:initial"><strong>Bundan daha büyük bir duruşta</strong></label>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <label>Eşik</label>
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <input type="number" min="1" step="1" class="form-control" id="basicInput" placeholder="Süre">
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <select class="form-select" id="basicSelect">
+                                                <option>Dakika</option>
+                                                <option>Saat</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Aksiyon</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <label style="text-transform:initial"><strong>Buna e-mail gönder</strong></label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Alıcı</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="email" class="form-control" name="e-mail" placeholder="E-mail adresleri">
+                                            <p><small class="text-muted">Birden çok e-mail adresini noktalı virgül ile ayır, örneğin mehmet@ornek.org</small></p>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>ID</label>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <label>bf50c0a2-9857-463d-a1a8-31fe2b8e76f9</label>
+                                        </div>
+
+
+                                        <div class="col-sm-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button> @*btn-primary*@
+                                            <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> @*btn-light-secondary*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+

@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "KaliteKayipSebep2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="row" id="table-hover-row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Kalite Kayıp Sebepleri</h4>
+                    <a href="#" class="btn btn-outline-primary">Kalite kayıp sebebi oluştur</a>
+                </div>
+                <div class="card-content">
+                    @*<div class="card-body">
+
+                    </div>*@
+                    <!-- table hover -->
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Tanım</th>
+                                    <th>Ekle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @*<tr>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                        </a>
+                                    </td>
+                                </tr>*@
+                                <tr>
+                                    <td class="text-xs-center text-muted" colspan="4" style="text-align:center">
+                                        Burada fire sebebi yok
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-primary">
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("KaliteKayipSebep","SensorYerleri")">
+                        <span aria-hidden="true"><i data-feather="chevron-left"></i></span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="@Url.Action("KaliteKayipSebep","SensorYerleri")">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <span aria-hidden="true"><i data-feather="chevron-right"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+

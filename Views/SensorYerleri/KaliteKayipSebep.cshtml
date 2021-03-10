@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "KaliteKayipSebep";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="basic-horizontal-layouts">
+    <div class="row match-height">
+        <div class="col-md-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Yeni Fire Sebebi</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form form-horizontal">
+                            <div class="form-body">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <label>Sensör yeri</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <a href="#">Sensorstandort02</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Üst fire sebebi</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>-Bu en üst seviye fire sebebidir-</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Seviye</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <label>1</label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Sınıflandırma</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" class="form-control" id="basicInput" placeholder="Sınıflandırma">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Tanım</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" class="form-control" id="basicInput" placeholder="Lütfen bu fire sebebini tanımlayın">
+                                    </div>
+
+
+
+                                    <div class="col-sm-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button> @*btn-primary*@
+                                        <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> @*btn-light-secondary*@
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-primary">
+            <li class="page-item">
+                <a class="page-link" href="#">
+                    <span aria-hidden="true"><i data-feather="chevron-left"></i></span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="@Url.Action("KaliteKayipSebep2","SensorYerleri")">2</a></li>
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("KaliteKayipSebep2","SensorYerleri")">
+                    <span aria-hidden="true"><i data-feather="chevron-right"></i></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</section>
+
+

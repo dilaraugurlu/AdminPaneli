@@ -1,0 +1,514 @@
+﻿
+@{
+    ViewBag.Title = "RaporOlustur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*Her bir input alanı ayrı kartlar halindeydi - BAŞLANGIÇ*@
+@*<section class="bootstrap-select">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Yeni Rapor Oluştur</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="row">
+                                <h6>Sensör yeri</h6>
+                                <div class="col-md-6 mb-4">
+                                    <fieldset class="form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>Sensorstandort02</option>
+                                            <option>Standort01</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Input Style start
+    <section id="input-style">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Rapor İsmi</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <h6>Rapor İsmi</h6>
+                            <div class="col-12">
+                                <p>
+                                        Lütfen bu rapor için bir isim girin.
+                                    </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="roundText">Rapor İsmi</label>
+                                    <input type="text" id="roundText" class="form-control round"
+                                           placeholder="Lütfen bu rapor için bir isim girin.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Rapor Tipi</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Göreceli zaman aralığı
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Sabit zaman aralığı
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     Input Sizing start
+    <section id="input-sizing">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Control Sizing Option</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    For different sizes of Input, Use classes like <code>.form-control-lg</code> &amp;
+                                    <code>.form-control-sm</code> for Large, Small input box.
+                                </p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h6>Default</h6>
+                                <input class="form-control" type="text" placeholder="Default Input">
+                                <fieldset class="form-group">
+                                    <select class="form-select" id="basicSelect">
+                                        <option>IT</option>
+                                        <option>Blade Runner</option>
+                                        <option>Thor Ragnarok</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+@*Her bir input alanı ayrı kartlar halindeydi - SON*@
+
+
+<!-- // Basic multiple Column Form section start -->
+@*<section id="multiple-column-form">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Yeni Rapor Oluştur</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <fieldset class="form-group">
+                                            <label for="basicSelect">Sensör Yeri</label>
+                                            <select class="form-select" id="basicSelect">
+                                                <option>Sensorstandort02</option>
+                                                <option>Standort01</option>
+                                            </select>
+                                        </fieldset>
+                                    </div>
+
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="report-name-column">Rapor İsmi</label>
+                                            <input type="text" id="report-name-column" class="form-control" placeholder="Lütfen bu rapor için bir isim girin"
+                                                   name="rname-column">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="flexRadioDefault">Rapor Tipi</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Göreceli zaman aralığı
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Sabit zaman aralığı
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="time-range-column">Zaman Aralığı</label>
+                                            <input type="text" id="time-range-column" class="form-control" placeholder="Süre" name="time-range-column">
+                                            <select class="form-select" id="basicSelect">
+                                                <option>Gün</option>
+                                                <option>Hafta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12">
+                                        <div class="form-group">
+                                            <fieldset class="form-group">
+                                                <label for="basicSelect">Rapor Zaman Aralığı</label>
+                                                <select class="form-select" id="basicSelect">
+                                                    <option>00</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12">
+                                        <div class="form-group">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect">
+                                                    <option>00</option>
+                                                    <option>15</option>
+                                                    <option>30</option>
+                                                    <option>45</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3 col-12">
+                                        <div class="form-group">
+                                            <fieldset class="form-group">
+                                                <label for="basicSelect">Rapor Zaman Aralığı</label>
+                                                <select class="form-select" id="basicSelect">
+                                                    <option>00</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3 col-12">
+                                        <div class="form-group">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect">
+                                                    <option>00</option>
+                                                    <option>15</option>
+                                                    <option>30</option>
+                                                    <option>45</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="email-id-column">Email</label>
+                                            <input type="email" id="email-id-column" class="form-control" name="email-id-column"
+                                                   placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <div class='form-check'>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="checkbox5" class='form-check-input' checked>
+                                                <label for="checkbox5">Remember Me</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                        <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+<!-- // Basic multiple Column Form section end -->
+<!-- Basic Horizontal form layout section start -->
+<section id="basic-horizontal-layouts">
+    <div class="row match-height">
+        <div class="col-md-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Yeni Rapor Oluştur</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form form-horizontal">
+                            <div class="form-body">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <label>Rapor İsmi</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" id="report-name" class="form-control" name="rname" placeholder="Lütfen rapor için bir isim giriniz">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Sensör Yeri</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>Sensorstandort02</option>
+                                            <option>Standort01</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Rapor Tipi</label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label style="text-transform:initial" class="form-check-label" for="flexRadioDefault1">
+                                                Göreceli zaman aralığı
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <label style="text-transform:initial" class="form-check-label" for="flexRadioDefault2">
+                                                Sabit zaman aralığı
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Zaman Aralığı</label>
+                                    </div>
+
+                                    <div class="col-md-4 form-group">
+                                        <input type="number" min="1" step="1" class="form-control" id="basicInput" placeholder="Süre">
+                                    </div>
+
+                                    <div class="col-md-4 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>Gün</option>
+                                            <option>Hafta</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label>Rapor Zaman Aralığı</label>
+                                    </div>
+
+                                    <div class="col-md-2 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>00</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-2 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>00</option>
+                                            <option>15</option>
+                                            <option>30</option>
+                                            <option>45</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-2 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>00</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="col-md-2 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>00</option>
+                                            <option>15</option>
+                                            <option>30</option>
+                                            <option>45</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label></label>
+                                    </div>
+
+                                    <div class="col-md-8 form-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="checkbox1" class='form-check-input'>
+                                            <label style="text-transform:initial" for="checkbox1">Bu raporun OEE'sini gösterge panelinde göster</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="checkbox1" class='form-check-input'>
+                                            <label style="text-transform:initial" for="checkbox1">Bu raporu herkesin ulaşabileceği umumi rapora dönüştür. (Yalnız okuma, giriş yapmadan erişilebilir)</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="checkbox1" class='form-check-input'>
+                                            <label style="text-transform:initial" for="checkbox1">OEE grafiğindeki performans çubuğunu varsayılan olarak göster</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="checkbox1" class='form-check-input'>
+                                            <label style="text-transform:initial" for="checkbox1">BVarsayılan olarak OEE grafiğinde kalite çubuğunu göster</label>
+                                        </div>
+                                    </div>
+
+
+                                    @*<div class="col-12 col-md-8 offset-md-4 form-group">
+                                        <div class='form-check'>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="checkbox1" class='form-check-input' checked>
+                                                <label for="checkbox1">Remember Me</label>
+                                            </div>
+                                        </div>
+                                    </div>*@
+
+
+
+                                <div class="col-sm-12 d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Oluştur</button> @*btn-primary*@
+                                    <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> @*btn-light-secondary*@
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic Horizontal form layout section end -->

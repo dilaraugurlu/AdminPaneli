@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "StdProsesZaman2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="row" id="table-hover-row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Standart proses zamanı</h4>
+                    <a href="#" class="btn btn-outline-primary">Hedef hız yarat</a>
+                </div>
+                <div class="card-content">
+
+                    <!-- table hover -->
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Malzeme numarası</th>
+                                    <th>Tanım</th>
+                                    <th>Hız</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-light">Boş</span></td>
+                                    <td>Kesme üretim adedi/dak</td>
+                                    <td>11 başına Dakika</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-primary">
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("StdProsesZaman","SensorYerleri")">
+                        <span aria-hidden="true"><i data-feather="chevron-left"></i></span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="@Url.Action("StdProsesZaman","SensorYerleri")">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <span aria-hidden="true"><i data-feather="chevron-right"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+

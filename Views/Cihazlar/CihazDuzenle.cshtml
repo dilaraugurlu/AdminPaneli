@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "CihazDuzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section id="basic-horizontal-layouts">
+        <div class="row match-height">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Duruş Sebebi Sorgulama Cihazını Düzenle</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form form-horizontal">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Cihaz Tanımı</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="dev-def" class="form-control" name="ddef" placeholder="Lütfen bu cihaz için bir isim giriniz">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Hedef</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked disabled>
+                                                <label style="text-transform:initial" class="form-check-label" for="flexRadioDefault1">
+                                                    Duruş sebeplerini sorgula
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" disabled>
+                                                <label style="text-transform:initial" class="form-check-label" for="flexRadioDefault2">
+                                                    Andon tahtasını göster
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Sensör Yeri</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <a href="#">Sensorstandort02</a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Rapor</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <select class="form-select" id="basicSelect">
+                                                <option>OEE1</option>
+                                                <option>OEE2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button> 
+                                            <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row match-height">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Andon Tahtası Gösterme Cihazını Düzenle</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form form-horizontal">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Cihaz Tanımı</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="dev-def" class="form-control" name="ddef" placeholder="Lütfen bu cihaz için bir isim giriniz">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Hedef</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" disabled>
+                                                <label style="text-transform:initial" class="form-check-label" for="flexRadioDefault1">
+                                                    Duruş sebeplerini sorgula
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked disabled>
+                                                <label style="text-transform:initial" class="form-check-label" for="flexRadioDefault2">
+                                                    Andon tahtasını göster
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Rapor</label>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            <a href="#">OEE1</a>
+                                        </div>
+                                        <div class="col-sm-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button>
+                                            <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

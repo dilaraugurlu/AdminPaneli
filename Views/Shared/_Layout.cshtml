@@ -1,0 +1,313 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnoPro - ÜPEYS</title>
+
+    <link rel="stylesheet" href="~/Frontend/assets/css/bootstrap.css">
+
+    <link href="~/Frontend/assets/vendors/apexcharts/apexcharts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Frontend/assets/vendors/chartjs/Chart.min.css">
+
+    <link rel="stylesheet" href="~/Frontend/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="~/Frontend/assets/css/app.css">
+</head>
+
+
+<body>
+    <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <a href="@Url.Action("Index","Home")"><img src="~/Frontend/assets/images/oeepng.png" alt="" srcset="" height="180" width="180"></a>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+
+                        <li class="sidebar-item">
+                            <a href="@Url.Action("Index","Home")" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i>
+                                <span>Ana Sayfa</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="@Url.Action("Bakim","Bakim")" class='sidebar-link'>
+                                <i data-feather="alert-octagon" width="20"></i>
+                                <span>Bakım</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="trending-up" width="20"></i>
+                                <span>Raporlar</span>
+                            </a>
+
+                            <ul class="submenu">
+                                <li><a href="@Url.Action("TumRaporlar","Raporlar")">Tüm raporlar</a></li>
+
+                                <li><a href="@Url.Action("RaporOlustur","Raporlar")">Rapor oluştur</a></li>
+
+                                <li><a href="@Url.Action("RaporGoster","Raporlar")">Raporu göster</a></li>
+
+                                <li><a href="@Url.Action("RaporDuzenle","Raporlar")">Raporu düzenle</a></li>
+
+
+                                <li class="divider"></li>
+
+
+                                <li><a href="@Url.Action("AndonTahtasi","Raporlar")">Andon tahtası</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="sidebar-item has-sub ">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="triangle" width="20"></i>
+                                <span>Alarmlar</span>
+                            </a>
+
+                            <ul class="submenu">
+                                <li><a href="@Url.Action("TumAlarmlar","Alarmlar")">Tüm alarmlar</a></li>
+                                <li><a href="@Url.Action("AlarmOlustur","Alarmlar")">Alarm oluştur</a></li>
+                                <li><a href="@Url.Action("AlarmDuzenle","Alarmlar")">Alarmı düzenle</a></li>
+                            </ul>
+                        </li>
+
+                        <li class='sidebar-title'>Kütük Verileri</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Sensörler</span>
+                            </a>
+
+                            <ul class="submenu ">
+                                <li>
+                                    <a href="@Url.Action("TumSensorler","Sensorler")">Tüm sensörler</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("SensoruDuzenle","Sensorler")">Sensörü düzenle</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Sensör Yerleri</span>
+                            </a>
+
+
+
+                            <ul class="submenu ">
+
+                                <li>
+                                    <a href="@Url.Action("TumSY","SensorYerleri")">Tüm sensör yerleri</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SYOlustur","SensorYerleri")">Sensör yeri oluştur</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SYDuzenle","SensorYerleri")">Sensör yerini düzenle</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="@Url.Action("YerdekiSensorler","SensorYerleri")">Yerdeki sensörler</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SYRapor","SensorYerleri")">Sensör yeri raporları</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SYAlarm","SensorYerleri")">Sensör yerindeki alarmlar</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SYOlay","SensorYerleri")">Sensör yerindeki olaylar</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SYCihaz","SensorYerleri")">Sensör yerindeki cihazlar</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Vardiya Planları</span>
+                            </a>
+
+                            <ul class="submenu ">
+
+                                <li>
+                                    <a href="@Url.Action("TumVP","VardiyaPlanlari")">Tüm vardiya planları</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("VPOlustur","VardiyaPlanlari")">Vardiya planı oluştur</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("VPGoster","VardiyaPlanlari")">Vardiya planını göster</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("VPDuzenle","VardiyaPlanlari")">Vardiya planını düzenle</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Cihazlar</span>
+                            </a>
+
+                            <ul class="submenu ">
+
+                                <li>
+                                    <a href="@Url.Action("TumCihazlar","Cihazlar")">Tüm cihazlar</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("CihazOlustur","Cihazlar")">Cihaz oluştur</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("CihazDuzenle","Cihazlar")">Cihazı düzenle</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Tanımlamalar</span>
+                            </a>
+
+                            <ul class="submenu ">
+
+                                <li>
+                                    <a href="@Url.Action("StdProsesZaman", "SensorYerleri")">Standart proses zamanı</a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("KaliteKayipSebep","SensorYerleri")">Kalite kayıp sebepleri</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                        <li class="dropdown nav-icon">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="d-lg-inline-block">
+                                    <i data-feather="bell"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-large">
+                                <h6 class='py-2 px-4'>Bildirimler</h6>
+                                <ul class="list-group rounded-none">
+                                    <li class="list-group-item border-0 align-items-start">
+                                        <div class="avatar bg-success mr-3">
+                                            <span class="avatar-content"><i data-feather="trending-down"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class='text-bold'>OEE Uyarısı</h6>
+                                            <p class='text-xs'>
+                                               OEE %80'in altına düştü
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown nav-icon mr-2">
+                            <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="d-lg-inline-block">
+                                    <i data-feather="mail"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Hesap</a>
+                                <a class="dropdown-item" href="#"><i data-feather="mail"></i> Mesajlar</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Ayarlar</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Çıkış yap</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="avatar mr-1">
+                                    <img src="~/Frontend/assets/images/fotoğraf.jpg" alt="" srcset="">
+                                </div>
+                                <div class="d-none d-md-block d-lg-inline-block">Merhaba, Dilara</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Hesap</a>
+                                <a class="dropdown-item" href="#"><i data-feather="mail"></i> Mesajlar</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Ayarlar</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Çıkış yap</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+          
+
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - ASP.NET Uygulamam</p>
+                </footer>
+            </div>
+
+            <script src="~/Frontend/assets/js/feather-icons/feather.min.js"></script>
+            <script src="~/Frontend/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+            <script src="~/Frontend/assets/js/app.js"></script>
+
+            <script src="~/Frontend/assets/vendors/dayjs/dayjs.min.js"></script>
+            <script src="~/Frontend/assets/vendors/chartjs/Chart.min.js"></script>
+            <script src="~/Frontend/assets/vendors/apexcharts/apexcharts.min.js"></script>
+            <script src="~/Frontend/assets/js/pages/ui-apexchart.js"></script>
+            <script src="~/Frontend/assets/js/pages/dashboard.js"></script>
+
+            <script src="~/Frontend/assets/js/main.js"></script>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+       
+</body>
+</html>

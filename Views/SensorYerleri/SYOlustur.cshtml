@@ -1,0 +1,162 @@
+﻿
+@{
+    ViewBag.Title = "SYOlustur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section id="basic-horizontal-layouts">
+        <div class="row match-height">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Yeni Sensör Yeri Oluştur</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form form-horizontal">
+                                <div class="form-body">
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <label>Sensör yerinin adı</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="sensor-name" class="form-control" name="sname" placeholder="Lütfen bu sensör yeri için bir isim girin">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Vardiya planı</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <select class="form-select" id="basicSelect">
+                                                <option>3 vardiya</option>
+                                                <option>Normal mesai</option>
+                                                <option>Schichtplan 21 UnoPro</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Çarpan</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input id="factor" placeholder="Sensör olayları için çarpanı girin" min="0.00" step="0.01" type="number" class="form-control" name="sname">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label></label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="checkbox" id="checkbox" class='form-check-input'>
+                                            <label style="text-transform:initial" for="checkbox">Bildirilenden büyükse, bildirilen birimleri yoksay</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Maksimum miktar</label>
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <input id="maxQty" placeholder="Adet" min="1" type="number" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            başına
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            Dakika
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label></label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <div class="form-check">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="checkbox" class='form-check-input'>
+                                                    <label style="text-transform:initial" for="checkbox">Bu konum, raporlardaki kaliteyi ölçmek için kullanılır</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-check">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="checkbox" class='form-check-input'>
+                                                    <label style="text-transform:initial" for="checkbox">Erken vardiya bitimine izin ver</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-check">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="checkbox" class='form-check-input'>
+                                                    <label style="text-transform:initial" for="checkbox">Mikrostopları göster</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Alarm sebeplerini kopyala<br /><p class="text-muted">(Alarm sebeplerini kopyalayacağınız sensör yerini seçin)</p></label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            
+                                            <select class="form-select" id="basicSelect">
+                                                <option>Sensorstandort02</option>
+                                                <option>Standort01</option>
+                                            </select>
+
+                                        </div>
+
+                                       
+
+                                        <div class="col-md-4">
+                                            <label>Aksiyon</label>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <label>Buna mail gönder</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Alıcı</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="email" class="form-control" name="e-mail" placeholder="E-mail adresleri">
+                                            <p><small class="text-muted">Birden çok e-mail adresini noktalı virgül ile ayır, örneğin mehmet@ornek.org</small></p>
+                                        </div>
+
+
+                                        <h4 class="card-title">Hurda/fire sebeplerini sorgula</h4>
+
+                                        <div class="col-md-4">
+                                            <label>Bu aralıkta giriş gereklidir</label>
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <input id="time" placeholder="Süre" min="1" step="1" type="number" class="form-control" name="time">
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <select class="form-select" id="basicSelect">
+                                                <option>Dakika</option>
+                                                <option>Saat</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Oluştur</button> @*btn-primary*@
+            <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> @*btn-light-secondary*@
+        </div>
+
+    </section>
+

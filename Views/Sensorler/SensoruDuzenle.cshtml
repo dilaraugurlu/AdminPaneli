@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "SensoruDuzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Horizontal Input start -->
+    <section id="horizontal-input">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Sensör <strong>S1803010051</strong></h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row align-items-center">
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">Sensör adı</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <label>S1803010051</label>
+                                        @*<input type="text" id="first-name" class="form-control" name="fname"
+                                        placeholder="First Name">*@
+                                    </div>
+
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">Sensör yeri</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>Sensorstandort02</option>
+                                            <option>Standort01</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Wifi Konfigürasyonu</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row align-items-center">
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">SSID</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <input type="text" id="wlan-name" class="form-control" name="wname"
+                                               placeholder="Lütfen WLAN ağının ismini girin">
+                                    </div>
+
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">WPA2 PSK</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <input type="text" id="wlan-pass" class="form-control" name="wpass"
+                                               placeholder="Lütfen WLAN ağının şifresini girin">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Uzaktan Bağlantı Konfigürasyonu</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row align-items-center">
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">SSH Portu</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <input id="sshPort" placeholder="Lütfen port numarasını girin" max="65535" min="49152" step="1" type="number" class="form-control" name="sshport">
+                                    </div>
+
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">Durum</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <span class="badge bg-success">Aktif</span>
+                                    </div>
+                                    <div class="col-lg-2 col-3">
+                                        <label class="col-form-label">ID</label>
+                                    </div>
+                                    <div class="col-lg-10 col-9">
+                                        <label>687da8d3-9c54-40a1-82f7-174b2de67fb3</label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button> @*btn-primary*@
+                    <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> @*btn-light-secondary*@
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+<!-- Horizontal Input end -->

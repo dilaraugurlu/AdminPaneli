@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "StdProsesZaman";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section id="basic-horizontal-layouts">
+        <div class="row match-height">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Hedef Hızını Düzenle</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form form-horizontal">
+                                <div class="form-body">
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <label>Sensör yeri</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <a href="#">Sensorstandort02</a>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Malzeme numarası</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="mat-num" class="form-control" name="mnum" placeholder="Lütfen malzeme numarasını giriniz">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Tanım</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <input type="text" id="hedefHizTanim" class="form-control" name="hedefHizTanim" placeholder="Lütfen bu hedef hız için bir açıklama (ör. Sipariş numarası) giriniz">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>Hedef hız</label>
+                                            <p class="text-muted">(Adet başına dakika)</p>
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <input type="text" class="form-control" id="basicInput" placeholder="Adet">
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <select class="form-select" id="basicSelect">
+                                                <option>Dakika</option>
+                                                <option>Saat</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label>ID</label>
+                                        </div>
+
+                                        <div class="col-md-8 form-group">
+                                            <label>6fbf2265-d6c2-4a72-8c0b-4a3a5444c342</label>
+                                        </div>
+
+                                        <div class="col-sm-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button> @*btn-primary*@
+                                            <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> @*btn-light-secondary*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-primary">
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <span aria-hidden="true"><i data-feather="chevron-left"></i></span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="@Url.Action("StdProsesZaman2","SensorYerleri")">2</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("StdProsesZaman2","SensorYerleri")">
+                        <span aria-hidden="true"><i data-feather="chevron-right"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </section>
+
+
+
+
+

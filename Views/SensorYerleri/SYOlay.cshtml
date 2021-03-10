@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "SYOlay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Sensorstandort 02 yerindeki sensör olayları</h4>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="basicInput">Başlangıç tarihi</label>
+                        <input type="text" class="form-control" id="basicInput" placeholder="Başlangıç tarihi">
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <label for="basicInput">Bitiş tarihi</label>
+                        <input type="text" class="form-control" id="basicInput" placeholder="Bitiş tarihi">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2">
+                        <button class="btn btn-primary btn-block" style="margin-top:14px">
+                            <span class="hidden-lg-up"><i id="ember27849" aria-hidden="true" title="Sensör olaylarını filtrele" class="ember-view fa fa-filter"><!----></i></span>
+                            <span class="hidden-md-down">Filtrele</span>
+                        </button>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2">
+                        <button class="btn btn-secondary btn-block" style="margin-top:14px">
+                            <span class="hidden-lg-up"><i id="ember27859" aria-hidden="true" title="Filtreyi temizle" class="ember-view fa fa-times"><!----></i></span>
+                            <span class="hidden-md-down">Sıfırla</span>
+                        </button>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2">
+                        <button class="btn btn-secondary btn-block" style="margin-top:13px">
+                            <span class="hidden-lg-up"><i id="ember27869" aria-hidden="true" title="Sensör olaylarını CSV olarak indir" class="ember-view fa fa-download"><!----></i></span>
+                            <span class="hidden-md-down">İndir</span>
+                        </button>
+                    </div>
+                </div><br /><br />
+                <p style="text-align:center">Vakitler, lokal zaman dilimine göre gösterilmektedir</p><br /><br />
+
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>Sensör</th>
+                                <th>'den itibaren</th>
+                                <th>'e kadar</th>
+                                <th>Miktar</th>
+                                @*<th>Sil</th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S1803010051</td>
+                                <td>2019-04-02 11:45:13</td>
+                                <td>2019-04-02 11:45:43</td>
+                                <td>0</td>
+                                @*<a href="#" class="btn icon btn-danger"><i data-feather="times"></i></a>*@
+                                @*<td>
+                                    <a href="#">
+                                        <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                    </a>
+                                </td>*@
+                            </tr>
+                            <tr>
+                                <td>S1803010051</td>
+                                <td>2019-04-02 11:44:43</td>
+                                <td>2019-04-02 11:45:13</td>
+                                <td>0</td>
+                                @*<td>
+                                    <a href="#">
+                                        <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                    </a>
+                                </td>*@ 
+                            </tr>
+                            <tr>
+                                <td>S1803010051</td>
+                                <td>2019-04-02 11:44:12</td>
+                                <td>2019-04-02 11:44:42</td>
+                                <td>0</td>
+                                @*<td>
+                                    <a href="#">
+                                        <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                    </a>
+                                </td>*@
+                            </tr>
+                            <tr>
+                                <td>S1803010051</td>
+                                <td>2019-04-02 11:43:42</td>
+                                <td>2019-04-02 11:44:12</td>
+                                <td>0</td>
+                                @*<td>
+                                    <a href="#">
+                                        <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                    </a>
+                                </td>*@
+                            </tr>
+                            <tr>
+                                <td>S1803010051</td>
+                                <td>2019-04-02 11:43:11</td>
+                                <td>2019-04-02 11:43:41</td>
+                                <td>0</td>
+                                @*<td>
+                                    <a href="#">
+                                        <i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="x-square"></i>
+                                    </a>
+                                </td>*@
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+    </div>
+</div>
+
+    @*<div class="">
+        <input id="ember27838" placeholder="Başlangıç tarihi" type="text" class="form-control ember-view">
+    </div>*@

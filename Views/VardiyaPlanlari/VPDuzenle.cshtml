@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "VPDuzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="basic-horizontal-layouts">
+    <div class="row match-height">
+        <div class="col-md-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Vardiya planı <strong>3 Vardiya</strong></h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form form-horizontal">
+                            <div class="form-body">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <label>Vardiya planının adı</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" id="vp-name" class="form-control" name="vpname" placeholder="Lütfen bu vardiya planı için bir isim giriniz">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label></label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="checkboxVP" class='form-check-input'>
+                                            <label style="text-transform:initial" for="checkboxVP">Vardiyaları bittiği günde göster</label>
+                                            <p>(Yani Pazar günü saat 00:00'da başlayan ve Pazartesi 08:00'da biten bir vardiya Pazartesi gününde gösterilir)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Vardiyaları kopyala</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <select class="form-select" id="basicSelect">
+                                            <option>3 Vardiya</option>
+                                            <option>Normal Mesai</option>
+                                            <option>Schichtplan 21 UnoPro</option>
+                                        </select>
+                                        <p class="text-muted">(Vardiyaların kopyalanmasını istediğiniz vardiya planını seçiniz)</p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-outline-primary mr-1 mb-1">Kaydet</button>
+                                        <button type="reset" class="btn btn-outline-danger mr-1 mb-1">İptal</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

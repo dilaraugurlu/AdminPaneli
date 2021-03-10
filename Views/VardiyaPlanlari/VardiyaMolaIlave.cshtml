@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "VardiyaMolaIlave";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UnoPro - ÜPEYS</title>
+
+        <link rel="stylesheet" href="~/Frontend/assets/css/bootstrap.css">
+
+        <link href="~/Frontend/assets/vendors/apexcharts/apexcharts.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/Frontend/assets/vendors/chartjs/Chart.min.css">
+
+        <link rel="stylesheet" href="~/Frontend/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+        <link rel="stylesheet" href="~/Frontend/assets/css/app.css">
+        @*<link rel="shortcut icon" href="~/Frontend/assets/images/oeepng.png" type="image/x-icon">*@
+    </head>
+
+    <body>
+        <section id="basic-horizontal-layouts">
+            <div class="row match-height">
+                <div class="col-md-10 col-12">
+                    @*<div class="card">*@
+                        <div class="card-header">
+                            <h4 class="card-title">Vardiya planına yeni vardiyayı ekle</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form class="form form-horizontal">
+                                    <div class="form-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label>İsim</label>
+                                            </div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="text" id="shift-name" class="form-control" name="sname" placeholder="Lütfen bu vardiya için bir isim girin">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>'den itibaren</label>
+                                            </div>
+                                            <div class="col-md-4 form-group">
+                                                <fieldset class="form-group">
+                                                    <select class="form-select" id="basicSelect">
+                                                        <option>Pazartesi</option>
+                                                        <option>Salı</option>
+                                                        <option>Çarşamba</option>
+                                                        <option>Perşembe</option>
+                                                        <option>Cuma</option>
+                                                        <option>Cumartesi</option>
+                                                        <option>Pazar</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+
+                                            <div class="col-md-4 form-group">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="text" id="hour" class="form-control" name="hour" placeholder="Saat">
+                                                    </div>
+                                                    @*<div class="col-md-2">
+                    :
+                    <input class="form-control" id="disabledInput" type="text" placeholder=":" disabled>
+                </div>*@
+                                                    <div class="col-md-6">
+                                                        <input type="text" id="hour" class="form-control" name="hour" placeholder="Dakika">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label>'e kadar</label>
+                                            </div>
+                                            <div class="col-md-4 form-group">
+                                                <fieldset class="form-group">
+                                                    <select class="form-select" id="basicSelect">
+                                                        <option>Pazartesi</option>
+                                                        <option>Salı</option>
+                                                        <option>Çarşamba</option>
+                                                        <option>Perşembe</option>
+                                                        <option>Cuma</option>
+                                                        <option>Cumartesi</option>
+                                                        <option>Pazar</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+
+                                            <div class="col-md-4 form-group">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="text" id="hour" class="form-control" name="hour" placeholder="Saat">
+                                                    </div>
+                                                    @*<div class="col-md-2">
+                    :
+                    <input class="form-control" id="disabledInput" type="text" placeholder=":" disabled>
+                </div>*@
+                                                    <div class="col-md-6">
+                                                        <input type="text" id="hour" class="form-control" name="hour" placeholder="Dakika">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-md-4">
+                                                <label></label>
+                                            </div>
+                                            <div class="col-md-8 form-group">
+                                                <div class="form-check">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="form-check-input form-check-primary"  name="customCheck" id="customColorCheck1">
+                                                        <label style="text-transform:initial" class="form-check-label" for="customColorCheck1">Mola (vardiya içinde planlı duruş)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-12 d-flex justify-content-end">
+                                                <button type="submit" class="btn btn-primary mr-1 mb-1">Vardiya ekle</button>
+                                                <button type="reset" class="btn btn-danger mb-1">İptal</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    @*</div>*@
+                </div>
+            </div>
+        </section>
+
+        <script src="~/Frontend/assets/js/feather-icons/feather.min.js"></script>
+        <script src="~/Frontend/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="~/Frontend/assets/js/app.js"></script>
+
+        <script src="~/Frontend/assets/vendors/dayjs/dayjs.min.js"></script>
+        <script src="~/Frontend/assets/vendors/chartjs/Chart.min.js"></script>
+        <script src="~/Frontend/assets/vendors/apexcharts/apexcharts.min.js"></script>
+        <script src="~/Frontend/assets/js/pages/ui-apexchart.js"></script>
+        <script src="~/Frontend/assets/js/pages/dashboard.js"></script>
+
+        <script src="~/Frontend/assets/js/main.js"></script>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @*@RenderSection("scripts", required: false)*@
+    </body>
+</html>
